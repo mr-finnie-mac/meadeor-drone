@@ -9,8 +9,8 @@ import time
 #setting up GPIOs
 GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BCM)
-GPIO.setup(21, GPIO.OUT)
-GPIO.setup(24, GPIO.OUT)
+GPIO.setup(21, GPIO.OUT)#LED strip
+GPIO.setup(24, GPIO.OUT)#Buzzer/siren
 #Repeating Ligh/buzzer alarm (flashing and beeping)
 while True:
     GPIO.output(21, GPIO.HIGH)
@@ -18,6 +18,4 @@ while True:
     time.sleep(0.1)# change sleep parameter to make it faster or slower
     GPIO.output(21, GPIO.LOW)
     GPIO.output(24, GPIO.HIGH)
-    time.sleep(0.1)# and here
-     
-    
+    time.sleep(0.1)# ~and here
